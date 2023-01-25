@@ -16,7 +16,7 @@ export const getStaticProps = async () => {
       <div>
         <h1>All students</h1>
         {students.map(student => (
-            <Link href={'/students/' + student.id} key={student.id} className="py-0.5 px-4 block bg-white my-5 mx-2.5 border-l-8 border-white hover:border-blue">
+            <Link href={'/students/' + student.id} key={student.id} className="py-5 px-4 block bg-white my-5 mx-2.5 border-l-8 border-white hover:border-blue">
               <h3>{ student.name }</h3>
             
           </Link>
