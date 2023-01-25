@@ -3,9 +3,11 @@ import Navbar from "comps/navbar.js"
 
 const Layout = ({ children }) => {
   return (
-    <div className="   max-w-4xl mx-auto my-0    ">
+    <div className="  mx-auto my-0    ">
       <Navbar />
+      <div className="  container max-w-4xl mx-auto my-0   ">
       { children }
+      </div>
       <Footer />
     </div>
   );
