@@ -1,11 +1,13 @@
 import Head from 'next/head'
 import {useState} from 'react';
 import axios from 'axios';
+import { useEffect } from 'react'
 
 
 const weather = () => {
 
     const [city, setCity] = useState('');
+    const [Seattle, SeattleCity] = useState('Seattle');
 	const [temp, setTemp] = useState(null);
 	const [minTemp, setMinTemp] = useState('');
 	const [maxTemp, setMaxTemp] = useState('');
@@ -38,6 +40,10 @@ const weather = () => {
 			.then(function (response) {
 				console.log(response.data);
 				const {data} = response;
+
+                const truecity = (city === Seattle);
+                console.log(truecity);
+
 				const newMinTemp = (data.min_temp);
 				const newMaxTemp = Math.ceil(data.max_temp);
                 const newNewTemp = Math.ceil(data.temp);
@@ -53,12 +59,30 @@ const weather = () => {
 				setWindDegree(newWindDegree);
 
                 setTemp(true);
+
+
 			})
 			.catch(function (error) {
 				console.error(error);
 				setErr(true);
-			});
+			}), (city === Seattle);
+
+            
 	};
+    useEffect(() => {
+    
+            getWeather();
+          
+         }, []);
+     
+   useEffect(() => {
+    const interval = setInterval(() => {
+        getWeather();
+       },10000);
+       return () => clearInterval(interval);
+     }, []);
+ 
+
 
     return ( 
         <>
@@ -73,7 +97,7 @@ const weather = () => {
 					Weather App
 				</h2>
 			</div>
-			<div className="flex sm:flex-col">
+			{/* <div className="flex sm:flex-col">
 				<input
 					type="text"
 					placeholder="City..."
@@ -81,12 +105,12 @@ const weather = () => {
 					onChange={e => setCity(e.target.value)}
 				/>
 				<button
-					onClick={getWeather}
+					
 					className="outline-none border-none font-bold font-raleway px-12 py-2 rounded-sm bg-indigo-300 text-gray-700 transition duration-300 hover:bg-indigo-600 hover:text-white"
 				>
 					Search
 				</button>
-			</div>
+			</div> */}
 			{temp && (
 				<div className="mt-10 flex flex-col justify-start bg-indigo-200 px-12 py-4 rounded font-raleway text-xl font-semibold text-gray-700 sm:text-base sm:px-8">
 					<div className="flex mb-4">
