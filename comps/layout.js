@@ -3,12 +3,13 @@ import Navbar from "comps/navbar.js"
 
 const Layout = ({ children }) => {
   return (
-    <div >
+    <div className="flex flex-col justify-between h-screen" >
       <Navbar />
 
-      <div className="container max-w-4xl   mx-auto my-0    ">
+      <div className="container max-w-4xl   mx-auto my-0 mb-auto ">
       { children }
       </div>
+      
       <Footer />
     </div>
   );
