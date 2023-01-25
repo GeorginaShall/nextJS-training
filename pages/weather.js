@@ -67,7 +67,7 @@ const weather = () => {
             <meta name="keywords" content="items"/>
         </Head>
 
-        <div className="flex justify-center items-center h-screen flex-col">
+        <div className="flex justify-center items-center flex-col">
 			<div>
 				<h2 className="font-raleway text-5xl font-extrabold mb-10 sm:text-4xl">
 					Weather App

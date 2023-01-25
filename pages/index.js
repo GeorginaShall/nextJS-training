@@ -19,10 +19,10 @@ export default function Home() {
     
       <div>
 
-      <h1 className="text-titlesdark pb-5 text-center">HomePage</h1>
+      <h1 className="text-titlesdark font-raleway text-5xl font-extrabold mb-10 sm:text-4xl text-center">HomePage</h1>
         <p className="text-textgray ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus animi impedit suscipit architecto, odio inventore nostrum non neque dicta. Quam magni accusantium culpa distinctio tempore iure accusamus, dolorem nobis odit.</p>
         <p className="text-textgray ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus animi impedit suscipit architecto, odio inventore nostrum non neque dicta. Quam magni accusantium culpa distinctio tempore iure accusamus, dolorem nobis odit.</p>
-      <Link href="/students/" className="block w-40 py-2 my-4 mx-auto rounded bg-blue text-white text-center">See Students Listing</Link>
+      <Link href="/students/" className="block w-80 mx-auto outline-none border-none font-bold font-raleway px-12 py-4 mt-6 rounded-sm bg-indigo-300 text-gray-700 transition duration-300 hover:bg-indigo-600 hover:text-white text-center">See Students Listing</Link>
 
 
       </div>
