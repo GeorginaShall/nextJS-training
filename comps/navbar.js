@@ -66,8 +66,8 @@ const Navbar = () => {
             <Link href="/weather" className="ml-3">weather</Link>
             <Link href="/students/" className="ml-3">students Listing</Link>
 
-            <div className=" ml-3 mt-10 justify-start bg-indigo-200 px-12 rounded font-raleway text-xl font-semibold text-gray-700 sm:text-base sm:px-8">
-              <div className="flex-row">
+            <div className=" ml-3  text-center bg-indigo-200 px-8 rounded font-raleway text-l font-semibold text-gray-700 sm:text-base sm:px-5">
+              <div className="flex">
                 <p className="w-20 sm:w-20">Beirut :</p>
                 <p>{newTemp} ° C</p>
               </div>
